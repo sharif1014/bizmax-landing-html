@@ -1,0 +1,196 @@
+.cs_fs_20 {
+  font-size: 20px;
+  line-height: 1.75em;
+
+  @media (max-width:767px) {
+    font-size: 18px;
+  }
+}
+
+.cs_fs_48 {
+  font-size: 48px;
+
+  @media (max-width:991px) {
+    font-size: 36px;
+  }
+}
+
+.cs_fs_60 {
+  font-size: 60px;
+  line-height: 1.167em;
+
+  @media (max-width:1199px) {
+    font-size: 52px;
+  }
+
+  @media (max-width:991px) {
+    font-size: 42px;
+  }
+
+  @media (max-width:767px) {
+    font-size: 36px;
+  }
+}
+
+.cs_white_color {
+  color: $white;
+}
+
+.cs_primary_color {
+  color: $primary;
+}
+
+.cs_secondary_color {
+  color: $secondary;
+}
+
+.cs_accent_color {
+  color: $accent;
+}
+
+.cs_light {
+  font-weight: 300;
+}
+
+.cs_normal {
+  font-weight: 400;
+}
+
+.cs_medium {
+  font-weight: 500;
+}
+
+.cs_semibold {
+  font-weight: 600;
+}
+
+.cs_bold {
+  font-weight: 700;
+}
+
+.cs_extra_bold {
+  font-weight: 800;
+}
+
+.cs_black {
+  font-weight: 900;
+}
+
+.cs_bg_filed {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cs_section_heading {
+  margin-bottom: 88px;
+  position: relative;
+  z-index: 1;
+
+  .cs_section_title {
+    @media (max-width:575px) {
+      font-size: 30px;
+    }
+  }
+
+  .cs_section_subtitle {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+}
+
+
+// Preloader design
+.preloader {
+  width: 100%;
+  height: 100vh;
+  background-color: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.hide {
+    display: none;
+  }
+}
+
+.loader_container,
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader_container {
+  position: relative;
+  height: 450px;
+  width: 350px;
+  border-radius: 16px;
+  background-color: $accent;
+  overflow: hidden;
+
+}
+
+.loader_container.active {
+  background-color: $black;
+}
+
+.loader_container::before {
+  content: "";
+  position: absolute;
+  height: 650px;
+  width: 650px;
+  background-image: conic-gradient(transparent, transparent, transparent, $accent);
+}
+
+.loader_container.active:before {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader_container .overlay {
+  position: absolute;
+  height: 440px;
+  width: 340px;
+  font-size: 120px;
+  font-weight: 700;
+  color: $accent;
+  border-radius: 12px;
+  background-color: $black;
+}
+
+/*===========================================
+  Responsive Design
+===========================================*/
+
+@media only screen and (max-width:991px) {
+  .cs_section_heading {
+    margin-bottom: 58px;
+
+    .cs_section_subtitle {
+      margin-bottom: 5px;
+    }
+  }
+
+  .loader_container {
+    height: 350px;
+    width: 250px;
+
+  }
+
+  .loader_container .overlay {
+    height: 340px;
+    width: 240px;
+    font-size: 50px;
+  }
+
+}

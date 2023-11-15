@@ -1,0 +1,205 @@
+/*--------------------------------------------------------------
+1. Typography
+----------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap');
+
+
+body,
+html {
+  color: $gray;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+  clear: both;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  line-height: 1.3em;
+}
+
+h1 {
+  font-size: 68px;
+  line-height: 1.471em;
+}
+
+h2 {
+  font-size: 50px;
+  line-height: 1.2em;
+
+}
+
+h3 {
+  font-size: 29px;
+  line-height: 1.75em;
+
+}
+
+h4 {
+  font-size: 21px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+ul {
+  margin: 0 0 25px 0;
+  padding-left: 20px;
+  list-style: square outside none;
+}
+
+ol {
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 15px;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+address {
+  margin: 0 0 15px;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+button {
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 25px;
+
+  th {
+    font-weight: 600;
+    color: $border;
+  }
+
+  td,
+  th {
+    border-top: 1px solid $light_grey;
+    padding: 11px 10px;
+  }
+}
+
+dl {
+  margin-bottom: 25px;
+
+  dt {
+    font-weight: 600;
+  }
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+pre {
+  color: $border;
+  border: 1px solid $light_grey;
+  font-size: 18px;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+kbd {
+  font-size: 100%;
+  background-color: $border;
+  border-radius: 5px;
+}
+
+input,
+textarea {
+  color: $black;
+}
+
+/*=======================================
+RESPONSIVE DESIGN
+========================================*/
+@media only screen and (max-width: 1199px) {
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    br {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+}
