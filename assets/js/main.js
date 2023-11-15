@@ -18,7 +18,7 @@
   ------------------------------------------------------------------------*/
   $(window).on("load", function () {
     $(window).trigger('resize');
-    preloader();
+    //preloader();
     calculateWindowLoadTime();
   });
   /*--------------------------------------------------------------
@@ -29,12 +29,12 @@
   });
   //window load time calculation
   function calculateWindowLoadTime() {
-    if (window.performance && window.performance.timing) {
-      const timing = window.performance.timing;
+    if (window.performance && window.PerformanceNavigationTiming) {
+      const timing = window.PerformanceNavigationTiming;
       const loadTime = timing.navigationStart - timing.loadEventEnd;
-      return loadTime
+      return loadTime;
     } else {
-      console.log("Performance API is not supported in this browser.");
+      textContent = 'Performance API is not supported in this browser.';
     }
   }
 
@@ -109,7 +109,7 @@
     let increament = setInterval(() => {
       perVal++;
       percent.textContent = `${perVal}%`;
-      if (perVal == 100) {
+      if (perVal = 100) {
         clearInterval(increament);
         loader_container.classList.remove("active");
         preloader.classList.add("hide");
